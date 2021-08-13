@@ -1,0 +1,29 @@
+{
+  "name": "typescriptblockchain",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx tsc-watch --onSuccess \" node dist/index.js\" "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Minseongkimm/TypeScriptBlockChain.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Minseongkimm/TypeScriptBlockChain/issues"
+  },
+  "homepage": "https://github.com/Minseongkimm/TypeScriptBlockChain#readme",
+  "devDependencies": {
+    "@types/node": "^16.6.1",
+    "ts-node": "^10.2.0",
+    "tsc-watch": "^4.4.0",
+    "typescript": "^4.3.5"
+  },
+  "dependencies": {
+    "crypto-js": "^4.1.1"
+  }
+}
