@@ -41,7 +41,25 @@ const genesisBlock: Block = new Block(0, "128309127409", "", "hello", 123456);
 const createNewBlock = (data:string) : Block=> {
     const previousBlock: Block = getLatestBlock();
     const newIndex: number = previousBlock.index +1 ;
-}
+    const newTimestamp : number = getNewTimeStamp();
+    const newHash : string = Block.calculateBlockHash(
+        newIndex,
+        previousBlock.hash,
+        newTimestamp,
+        data
+    );
+const newBlock: Block = new Block(
+    newIndex,
+    newHash,
+    previousBlock.hash,
+    data,
+    newTimestamp,
+)
+return newBlock;
+};
+
+console.log(createNewBlock("hello"), createNewBlock("bye bye"))
+
 
 let blockchain: Block[] = [genesisBlock];
 
